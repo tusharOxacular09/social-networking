@@ -1,0 +1,74 @@
+{"level":"error","timestamp":"2024-05-30T02:39:02.062Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T02:39:10.143Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T02:41:37.017Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T02:44:00.307Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T02:44:01.496Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T02:44:43.165Z","request URL":"/api/user/login","error message":"Invalid user credentials!"}
+{"level":"error","timestamp":"2024-05-30T02:46:02.460Z","request URL":"/api/posts","error message":"Internal Server Error"}
+{"level":"error","timestamp":"2024-05-30T02:56:34.935Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T02:56:40.471Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T02:57:43.470Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T02:57:46.712Z","request URL":"/api/posts","error message":"Token expired. Please log in again."}
+{"level":"error","timestamp":"2024-05-30T02:59:19.658Z","request URL":"/api/posts","error message":"Invalid token. Please log in again."}
+{"level":"error","timestamp":"2024-05-30T02:59:23.264Z","request URL":"/api/posts","error message":"Invalid token. Please log in again."}
+{"level":"error","timestamp":"2024-05-30T03:00:44.403Z","request URL":"/api/posts","error message":"Invalid token. Please log in again."}
+{"level":"error","timestamp":"2024-05-30T03:02:22.828Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T03:02:39.207Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T14:16:05.435Z","request URL":"/api/posts","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T14:16:17.654Z","request URL":"/api/posts/aos","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T14:23:52.470Z","request URL":"/api/posts/1233","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T14:24:29.554Z","request URL":"/api/posts/post-12wes","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T14:30:34.033Z","request URL":"/api/posts/","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-30T14:31:00.237Z","request URL":"/api/posts/","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-30T14:31:17.170Z","request URL":"/api/posts/","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-30T14:31:59.301Z","request URL":"/api/posts/","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-30T14:32:35.133Z","request URL":"/api/posts/","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-30T14:32:58.158Z","request URL":"/api/posts/","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-30T14:33:22.606Z","request URL":"/api/posts/","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-30T14:53:23.877Z","request URL":"/api/posts/","error message":"Post image is required"}
+{"level":"error","timestamp":"2024-05-30T15:03:35.489Z","request URL":"/api/posts/all","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T15:03:40.537Z","request URL":"/api/posts/123","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T15:04:16.825Z","request URL":"/api/posts/123","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T15:04:33.778Z","request URL":"/api/posts/all","error message":"No post provided yet."}
+{"level":"error","timestamp":"2024-05-30T15:04:57.999Z","request URL":"/api/posts/user-23mn","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T15:05:03.544Z","request URL":"/api/posts/","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-30T15:05:13.049Z","request URL":"/api/posts/post-12we","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T15:05:42.031Z","request URL":"/api/posts/post-12we","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T15:46:27.727Z","request URL":"/api/posts/post-12we","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T16:08:29.740Z","request URL":"/api/comments/post-12we.","error message":"No comments provided yet."}
+{"level":"error","timestamp":"2024-05-30T16:19:52.881Z","request URL":"/api/comments/post-12we","error message":"Error while adding new comment."}
+{"level":"error","timestamp":"2024-05-30T16:21:24.013Z","request URL":"/api/comments/post-12we","error message":"Content is required"}
+{"level":"error","timestamp":"2024-05-30T16:21:42.535Z","request URL":"/api/comments/post-12we","error message":"Content is required"}
+{"level":"error","timestamp":"2024-05-30T16:29:30.760Z","request URL":"/api/comments/post-12we","error message":"Invalid comment id."}
+{"level":"error","timestamp":"2024-05-30T16:40:54.493Z","request URL":"/api/comments/comment-12we","error message":"Error while adding new comment."}
+{"level":"error","timestamp":"2024-05-30T16:41:38.196Z","request URL":"/api/comments/comment-12we","error message":"Error while adding new comment."}
+{"level":"error","timestamp":"2024-05-30T16:42:22.816Z","request URL":"/api/comments/comment-12we","error message":"Error while adding new comment."}
+{"level":"error","timestamp":"2024-05-30T16:45:36.237Z","request URL":"/api/comments/comment-12we","error message":"Error while adding new comment."}
+{"level":"error","timestamp":"2024-05-30T16:47:14.641Z","request URL":"/api/comments/comment-12we","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-30T16:47:21.482Z","request URL":"/api/comments/comment-12we","error message":"Error while adding new comment."}
+{"level":"error","timestamp":"2024-05-30T16:48:58.720Z","request URL":"/api/comments/comment-12we","error message":"Internal Server Error"}
+{"level":"error","timestamp":"2024-05-30T16:49:03.024Z","request URL":"/api/comments/comment-12we","error message":"Internal Server Error"}
+{"level":"error","timestamp":"2024-05-30T16:49:40.396Z","request URL":"/api/comments/comment-12we","error message":"Error while adding new comment."}
+{"level":"error","timestamp":"2024-05-30T16:51:07.919Z","request URL":"/api/comments/comment-12we","error message":"Invalid comment details."}
+{"level":"error","timestamp":"2024-05-30T16:51:32.044Z","request URL":"/api/comments/comment-12we","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T16:51:34.053Z","request URL":"/api/comments/comment-12we","error message":"Invalid post id."}
+{"level":"error","timestamp":"2024-05-30T16:53:13.749Z","request URL":"/api/comments/comment-hsvK","error message":"Invalid comment id."}
+{"level":"error","timestamp":"2024-05-30T16:53:40.423Z","request URL":"/api/comments/comment-W3sf","error message":"No comments provided yet."}
+{"level":"error","timestamp":"2024-05-30T16:54:56.770Z","request URL":"/api/comments/comment-W3sf","error message":"Content is required"}
+{"level":"error","timestamp":"2024-05-30T16:55:01.637Z","request URL":"/api/comments/comment-W3sf","error message":"Invalid comment id."}
+{"level":"error","timestamp":"2024-05-30T16:56:24.363Z","request URL":"/api/comments/post-12we","error message":"Invalid comment id."}
+{"level":"error","timestamp":"2024-05-30T16:56:34.141Z","request URL":"/api/comments/comment-12we","error message":"No comments provided yet."}
+{"level":"error","timestamp":"2024-05-31T02:10:31.845Z","request URL":"/api/posts/all","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-31T02:20:30.328Z","request URL":"/api/likes/111","error message":"No likes provided yet."}
+{"level":"error","timestamp":"2024-05-31T02:41:36.225Z","request URL":"/api/likes/post-12we","error message":"Post id is required."}
+{"level":"error","timestamp":"2024-05-31T02:42:26.652Z","request URL":"/api/likes/post-12wes","error message":"Invalid Post ID."}
+{"level":"error","timestamp":"2024-05-31T13:48:18.753Z","request URL":"/api/user/login","error message":"Invalid user credentials!"}
+{"level":"error","timestamp":"2024-05-31T13:48:45.995Z","request URL":"/api/user/register","error message":"Password must contain at least one uppercase letter"}
+{"level":"error","timestamp":"2024-05-31T13:48:56.082Z","request URL":"/api/user/register","error message":"Password must contain at least one number"}
+{"level":"error","timestamp":"2024-05-31T13:49:02.936Z","request URL":"/api/user/register","error message":"Password must contain at least one special character"}
+{"level":"error","timestamp":"2024-05-31T14:00:31.711Z","request URL":"/api/posts?userId=123","error message":"No post provided by the user till."}
+{"level":"error","timestamp":"2024-05-31T14:01:20.609Z","request URL":"/api/posts?userId=123","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-31T14:01:24.939Z","request URL":"/api/posts?userId=123","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-31T14:07:16.135Z","request URL":"/api/comments/aa","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-31T14:11:52.644Z","request URL":"/api/likes/toggle/aaa","error message":"Please log in to continue."}
+{"level":"error","timestamp":"2024-05-31T14:12:43.039Z","request URL":"/api/posts/1qqw","error message":"Invalid post id."}

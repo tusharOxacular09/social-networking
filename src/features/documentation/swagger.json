@@ -1,0 +1,606 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "API Documentation",
+    "description": "This is the API documentation for my social networking application"
+  },
+  "host": "localhost:8080",
+  "basePath": "/api",
+  "schemes": ["http"],
+  "paths": {
+    "/user/login": {
+      "post": {
+        "summary": "Login a user",
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "User login credentials",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": {
+                  "type": "string",
+                  "example": "johndoe@example.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "secretpassword"
+                }
+              },
+              "required": ["email", "password"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User logged in successfully"
+          },
+          "400": {
+            "description": "Invalid email or password"
+          }
+        }
+      }
+    },
+    "/user/register": {
+      "post": {
+        "summary": "Register a new user",
+        "tags": ["Users"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "New user details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "John Doe"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "johndoe@example.com"
+                },
+                "password": {
+                  "type": "string",
+                  "example": "secretpassword"
+                }
+              },
+              "required": ["name", "email", "password"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "User registered successfully"
+          },
+          "400": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/posts": {
+      "post": {
+        "summary": "Create a new post",
+        "tags": ["Posts"],
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "postImage",
+            "type": "file",
+            "description": "Image to be uploaded",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "caption",
+            "type": "string",
+            "description": "Caption for the post",
+            "required": true
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Post created successfully"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    },
+    "/posts/all": {
+      "get": {
+        "summary": "Get all posts",
+        "tags": ["Posts"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "type": "integer",
+            "description": "Page number",
+            "default": 1
+          },
+          {
+            "in": "query",
+            "name": "limit",
+            "type": "integer",
+            "description": "Number of posts per page",
+            "default": 10
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of posts"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    },
+    "/posts/{id}": {
+      "get": {
+        "summary": "Get post by ID",
+        "tags": ["Posts"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the post to retrieve",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Post details"
+          },
+          "404": {
+            "description": "Post not found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete post by ID",
+        "tags": ["Posts"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the post to delete",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Post deleted successfully"
+          },
+          "404": {
+            "description": "Post not found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update post by ID",
+        "tags": ["Posts"],
+        "consumes": ["multipart/form-data"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the post to update",
+            "required": true
+          },
+          {
+            "in": "formData",
+            "name": "postImage",
+            "type": "file",
+            "description": "Updated image for the post"
+          },
+          {
+            "in": "formData",
+            "name": "caption",
+            "type": "string",
+            "description": "Updated caption for the post"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Post updated successfully"
+          },
+          "404": {
+            "description": "Post not found"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    },
+    "/posts": {
+      "get": {
+        "summary": "Get posts by user ID",
+        "tags": ["Posts"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "userId",
+            "type": "string",
+            "description": "ID of the user whose posts to retrieve",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of posts"
+          },
+          "404": {
+            "description": "User not found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    },
+    "/comments/{id}": {
+      "get": {
+        "summary": "Get all comments by post ID",
+        "tags": ["Comments"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the post to get comments for",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of comments"
+          },
+          "404": {
+            "description": "Post not found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      },
+      "post": {
+        "summary": "Add a new comment",
+        "tags": ["Comments"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the post to add a comment to",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Comment details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userId": {
+                  "type": "string",
+                  "description": "ID of the user adding the comment",
+                  "example": "user123"
+                },
+                "content": {
+                  "type": "string",
+                  "description": "Content of the comment",
+                  "example": "This is a comment"
+                }
+              },
+              "required": ["userId", "content"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Comment added successfully"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      },
+      "delete": {
+        "summary": "Delete a comment",
+        "tags": ["Comments"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the comment to delete",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Comment deleted successfully"
+          },
+          "404": {
+            "description": "Comment not found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      },
+      "put": {
+        "summary": "Update a comment",
+        "tags": ["Comments"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the comment to update",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Updated comment content",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "content": {
+                  "type": "string",
+                  "description": "Updated content of the comment",
+                  "example": "This is an updated comment"
+                }
+              },
+              "required": ["content"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Comment updated successfully"
+          },
+          "404": {
+            "description": "Comment not found"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    },
+    "/likes/{id}": {
+      "get": {
+        "summary": "Get all likes of a post",
+        "tags": ["Likes"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the post to get likes for",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of likes"
+          },
+          "404": {
+            "description": "Post not found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    },
+    "/likes/toggle/{id}": {
+      "get": {
+        "summary": "Get all toggled likes of a post",
+        "tags": ["Likes"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the post to get toggled likes for",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of toggled likes"
+          },
+          "404": {
+            "description": "Post not found"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    },
+    "/likes/{id}": {
+      "post": {
+        "summary": "Add a new like to a post",
+        "tags": ["Likes"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "string",
+            "description": "ID of the post to add a like to",
+            "required": true
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Like details",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userId": {
+                  "type": "string",
+                  "description": "ID of the user adding the like",
+                  "example": "user123"
+                }
+              },
+              "required": ["userId"]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Like added successfully"
+          },
+          "400": {
+            "description": "Invalid input"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        },
+        "security": [
+          {
+            "cookieAuth": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "required": ["name", "email", "password"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "The auto-generated id of the user"
+        },
+        "name": {
+          "type": "string",
+          "description": "The user's name"
+        },
+        "email": {
+          "type": "string",
+          "description": "The user's email"
+        },
+        "password": {
+          "type": "string",
+          "description": "The user's password"
+        }
+      },
+      "example": {
+        "id": "d5fE_asz",
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "password": "secretpassword"
+      }
+    }
+  },
+  "securityDefinitions": {
+    "cookieAuth": {
+      "type": "apiKey",
+      "in": "cookie",
+      "name": "secrete_token"
+    }
+  }
+}
